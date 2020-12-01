@@ -1,0 +1,28 @@
+.circle {
+  height: 7em;
+  width: 7em;
+  background-color: lightcoral;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  float: left;
+  margin-left: 15%;
+}
+
+.circle.Education {
+    background-color: lightgreen;
+}
+
+.circle.Work {
+    background-color: lightblue;
+}
+
+svg {
+    width: 70%;
+    height: 70%;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}

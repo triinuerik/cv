@@ -1,16 +1,18 @@
 import React from 'react';
-import { LifeEvent, Section } from '../interfaces'; 
-import { TimeLineNode } from './TimeLineNode';
+import { LifeEvent, Section } from '../../interfaces'; 
+import { TimeLineNode } from '../TimeLineNode/TimeLineNode';
+import './TimeLine.css'
+
 
 interface Props {
   lifeEvents: LifeEvent[];
 }
 
-export const TimeLine:  React.FC<Props> = props => {
+export const TimeLine: React.FC<Props> = props => {
   const { lifeEvents } = props;
 
   return(
-    <>
+    <div className='timeline'>
       { lifeEvents.map(({id, title, date, section, desc, stack} : LifeEvent) =>
         <TimeLineNode
           key={id}
@@ -21,6 +23,6 @@ export const TimeLine:  React.FC<Props> = props => {
           desc={desc}
           stack={stack} />
       )}
-    </>
+    </div>
   )
 }
