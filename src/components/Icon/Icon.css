@@ -1,11 +1,11 @@
 .circle {
   height: 7em;
   width: 7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: lightcoral;
   border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  float: left;
 }
 
 .circle.Education {
@@ -19,9 +19,4 @@
 svg {
     width: 70%;
     height: 70%;
-    display: block;
-    margin: auto;
-    position: absolute;
-    top: 15%;
-    left: 15%;
 }
