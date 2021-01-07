@@ -1,11 +1,12 @@
 .circle {
-  height: 7em;
-  width: 7em;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 7em;
+  width: 7em;
   background-color: lightcoral;
   border-radius: 50%;
+  float: left;
 }
 
 .circle.Education {
