@@ -10,7 +10,7 @@ export const TimeLineNode: React.FC<LifeEvent> = props => {
     <div className='node'>
       <Icon section={section} />
       <div className='node-content'>
-        <h1>{title}</h1>
+        <h1 className='title'>{title}</h1>
         <h2 className='date'>{date}</h2>
         <div className=''>{desc}</div>
         <div className=''>{stack}</div>

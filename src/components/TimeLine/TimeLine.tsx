@@ -13,6 +13,7 @@ export const TimeLine: React.FC<Props> = props => {
 
   return(
     <div className='timeline'>
+      <div className='line'></div>
       { lifeEvents.map(({id, title, date, section, desc, stack} : LifeEvent) =>
         <TimeLineNode
           key={id}
