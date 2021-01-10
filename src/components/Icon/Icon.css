@@ -2,22 +2,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 7em;
-  width: 7em;
-  background-color: lightcoral;
+  height: 6rem;
+  width: 6rem;
+  background-color: #EB7085;
   border-radius: 50%;
   float: left;
 }
 
 .circle.Education {
-    background-color: lightgreen;
+    background-color: #FFBA49;
 }
 
 .circle.Work {
-    background-color: lightblue;
+    background-color: #75C9C8;
 }
 
 svg {
     width: 70%;
     height: 70%;
+}
+
+@media only screen and (max-width: 640px) {
+    .circle {
+        float: unset;
+        margin: 0 auto;
+        height: 4rem;
+        width: 4rem;
+      }
 }
