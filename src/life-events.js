@@ -17,14 +17,14 @@ export const lifeEvents = [
         title: 'Start of University studies',
         date: '2016',
         section: 'Education',
-        desc: 'Started bachelor studies in Tallinn University of Technology in informatics'
+        desc: 'Started bachelor studies in Tallinn University of Technology in Informatics'
     },
     {
         id: 3,
         title: 'Summer internship at eKool',
         date: '01/08/2017',
         section: 'Work',
-        desc: 'Started work as a full-stack software engineering intern.',
+        desc: 'Started work as a full-stack software engineering intern',
         stack: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate', 'Vanilla JS',
          'JQuery', 'Bootstrap CSS', 'HTML'],
     },
@@ -33,7 +33,7 @@ export const lifeEvents = [
         title: 'Work as Junior Developer at eKool',
         date: '01/11/2017',
         section: 'Work',
-        desc: 'Started work as a junior full-stack software engineer.',
+        desc: 'Started work as a junior full-stack software engineer',
         stack: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate', 'Vanilla JS',
          'JQuery', 'Bootstrap CSS', 'HTML']
     },
@@ -45,13 +45,19 @@ export const lifeEvents = [
     },
     {
         id: 6,
-        title: 'Year abroad as an exchange student in France',
+        title: 'Moved to Troyes, France',
         date: '01/08/2018',
+        section: 'Other',
+    },
+    {
+        id: 7,
+        title: 'Year abroad as an exchange student in France',
+        date: '01/09/2018',
         section: 'Education',
         desc: 'Started studies in University of Technology of Troyes'
     },
     {
-        id: 7,
+        id: 8,
         title: 'I18n and l10n of LaSuli Firefox extension',
         date: 'Spring semester of 2019',
         section: 'Work',
@@ -59,18 +65,33 @@ export const lifeEvents = [
         stack: ['React JS', 'LinguiJS', 'Principles of i18n and l10n']
     },
     {
-        id: 8,
+        id: 9,
         title: 'Final thesis of Bachelor studies',
-        date: 'Spring semester of 2019',
+        date: '27?/08/2019',
         section: 'Education',
         desc: 'Work on a project to internationalize and localize in 3 languages (English, French, Estonian) a Firefox web extension to aid researchers doing qualitative text analysis in the field of knowledge engineering',
         stack: ['Python 3', 'Numpy'],
     },
     {
-        id: 9,
+        id: 10,
         title: 'Graduation with BSc in Informatics cum laude',
         date: '12/02/2018',
         section: 'Education',
         desc: ''
+    },
+    {
+        id: 11,
+        title: 'Moved to Warsaw, Poland',
+        date: '25?/10/2019',
+        section: 'Other',
+    },
+    {
+        id: 4,
+        title: 'Work as Associate Software Engineer at MicroStrategy',
+        date: '04/11/2019',
+        section: 'Work',
+        desc: 'Started work as a junior full-stack software engineer',
+        stack: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate', 'Vanilla JS',
+         'JQuery', 'Bootstrap CSS', 'HTML']
     },
 ]
