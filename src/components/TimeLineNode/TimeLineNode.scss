@@ -1,19 +1,21 @@
 .node {
   // width: 80%;
   // height: 50%;
-  margin: 3rem auto;
+  margin: 2rem 0;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 
   .node-content {
-    
+    max-width: 70%;
+    margin-left: 1rem;
 
     .title {
       font-size: 1.5rem;
     }
     
     .date { 
-      color: #CCCCCC;
+      color: #6A6A6A;
       font-weight: 400;
       font-size: 1rem;
     }
