@@ -1,0 +1,37 @@
+.node {
+  // width: 80%;
+  // height: 50%;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: row;
+
+  .node-content {
+    
+
+    .title {
+      font-size: 1.5rem;
+    }
+    
+    .date { 
+      color: #CCCCCC;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .node-content {
+    text-align: center;
+    margin-left: 0;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+
+}
