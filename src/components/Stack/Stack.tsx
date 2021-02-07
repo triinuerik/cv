@@ -1,19 +1,16 @@
 import React from 'react';
-import './Stack.css'
+import './Stack.scss'
 
 interface Props {
-    stack: string[];
+  stack: string[];
 }
 
-export const Stack: React.FC<Props> = props => {
-    const { stack } = props;
-    console.log(stack)
-
-    return(
-        <div className='stack-container'>
-          { stack && stack.map(tag =>
-            <span key={tag} className='tag'>{tag}</span>
-          )}
-        </div>
-      )
+export const Stack: React.FC<Props> = ({ stack }) => {
+  return(
+    <div className='stack-container'>
+      { stack && stack.map(tag =>
+        <span key={tag} className='tag'>{tag}</span>
+      )}
+    </div>
+  )
 }

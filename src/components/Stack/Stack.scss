@@ -1,0 +1,17 @@
+.stack-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .tag {
+    background-color: #484848;
+    color: #FFFFFF;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 3px;
+    white-space: nowrap;
+    padding: 5px;
+  }
+}
+
