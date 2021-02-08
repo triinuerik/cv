@@ -86,7 +86,7 @@ export const lifeEvents = [
         section: 'Other',
     },
     {
-        id: 4,
+        id: 12,
         title: 'Work as Associate Software Engineer at MicroStrategy',
         date: '04/11/2019',
         section: 'Work',

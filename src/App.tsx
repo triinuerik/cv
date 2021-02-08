@@ -14,7 +14,7 @@ const App: React.FC = () => {
         <Header />
         <Switch>
           <Route exact path="/">
-            <TimeLine lifeEvents={lifeEvents} />
+            <TimeLine lifeEvents={[...lifeEvents].reverse()} />
           </Route>
           <Route path="/about">
             <About />
