@@ -1,7 +1,7 @@
 import React from 'react';
 import { LifeEvent, Section } from '../../interfaces'; 
 import { TimeLineNode } from '../TimeLineNode/TimeLineNode';
-import './TimeLine.css'
+import './TimeLine.scss'
 
 
 interface Props {
