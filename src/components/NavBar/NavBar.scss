@@ -9,4 +9,8 @@
     margin: 0 1rem;
     color: #FFFFFF;
     text-decoration: none;
+
+    &.active {
+        font-weight: 600;
+    }
 }
