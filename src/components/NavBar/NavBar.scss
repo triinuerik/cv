@@ -3,14 +3,22 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-}
 
-.nav-item {
-    margin: 0 1rem;
-    color: #FFFFFF;
-    text-decoration: none;
-
-    &.active {
-        font-weight: 600;
+    .nav-item {
+        margin: 0 1rem;
+        color: #FFFFFF;
+        text-decoration: none;
+    
+        &.active {
+            font-weight: 600;
+        }
     }
 }
+
+@media only screen and (max-width: 640px) {
+    .nav-bar {
+      display: none;
+    }
+  }
+  
+  

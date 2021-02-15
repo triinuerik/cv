@@ -5,12 +5,14 @@ import { TimeLine } from './components/TimeLine/TimeLine';
 import { Header } from './components/Header/Header';
 import { Contact } from './components/Contact/Contact';
 import { About } from './components/About/About';
+import { BurgerMenu } from './components/BurgerMenu/BurgerMenu';
 import './App.css';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <Router>
+        <BurgerMenu />
         <Header />
         <Switch>
           <Route exact path="/">
