@@ -1,6 +1,6 @@
-export type Section = 'Education' | 'Work' | 'Other'
+type Section = 'Education' | 'Work' | 'Other'
 
-export interface LifeEvent {
+interface LifeEvent {
     id: number;
     title: string;
     date: string;

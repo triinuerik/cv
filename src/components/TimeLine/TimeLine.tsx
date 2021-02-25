@@ -1,6 +1,6 @@
 import React from 'react';
-import { LifeEvent, Section } from '../../interfaces'; 
 import { TimeLineNode } from '../TimeLineNode/TimeLineNode';
+import { Filter } from '../Filter/Filter';
 import './TimeLine.scss'
 
 
@@ -13,6 +13,7 @@ export const TimeLine: React.FC<Props> = props => {
 
   return(
     <div className='timeline'>
+      <Filter />
       <div className='line'></div>
       { lifeEvents.map(({id, title, date, section, desc, stack} : LifeEvent) =>
         <TimeLineNode

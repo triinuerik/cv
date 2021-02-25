@@ -1,6 +1,8 @@
 .header {
     width: 100%;
     height: 4rem;
+    min-width: 300px;
+    overflow: auto;
     background-color: #16161d;
     color: #FFFFFF;
     display: flex;

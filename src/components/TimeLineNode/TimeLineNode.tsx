@@ -1,5 +1,4 @@
 import React from 'react';
-import { LifeEvent } from '../../interfaces'; 
 import Icon from '../Icon/Icon';
 import { Stack } from '../Stack/Stack';
 import './TimeLineNode.scss'
