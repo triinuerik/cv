@@ -1,0 +1,80 @@
+.filter {
+  margin: 1rem;
+  margin-bottom: 0;
+  border: 1px solid #8f8f8f;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3px;
+
+
+  &:focus {
+    /* Provide a fallback style for browsers
+       that don't support :focus-visible */
+    outline: none;
+    border: none;
+    background: lightgrey;
+  }
+  
+  &:focus:not(:focus-visible) {
+    /* Remove the focus indicator on mouse-focus for browsers
+       that do support :focus-visible */
+    background: transparent;
+  }
+  
+  &:focus-visible {
+    /* Draw a very noticeable focus style for
+       keyboard-focus on browsers that do support
+       :focus-visible */
+    outline: 2px solid -webkit-focus-ring-color;
+    background: transparent;
+  }
+
+  .tag {
+    background-color: #484848;
+    color: #FFFFFF;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 1px 2px;
+    white-space: nowrap;
+    padding: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    .tag-remove-button {
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  input {
+    border: none;
+    outline: none;
+    flex-basis: auto;
+    height: 30px;
+    flex-grow: 1;
+  }
+
+}
+
+.suggestions {
+  padding: 0;
+  margin: 1rem 1.2rem;
+  margin-top: 0;
+
+  .suggestion-item {
+    display: block;
+    list-style: none;
+    border: 0.5px solid #8f8f8f;
+    border-top: 0;
+    padding: 5px;
+  }
+
+}
+

@@ -7,9 +7,7 @@ interface Props {
   section: string;
 }
 
-const Icon: React.FC<Props> = props => {
-  const { section } = props;
-
+const Icon: React.FC<Props> = ({section}) => {
   const renderIcon = () => {
     switch (section) {
       case 'Work':

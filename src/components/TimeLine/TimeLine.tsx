@@ -8,12 +8,15 @@ interface Props {
   lifeEvents: LifeEvent[];
 }
 
-export const TimeLine: React.FC<Props> = props => {
-  const { lifeEvents } = props;
+export const TimeLine: React.FC<Props> = ({ lifeEvents }) => {
+
+  const options = lifeEvents
+    .flatMap(lifeEvent => lifeEvent.stack)
+    .filter(stack => !!stack);
 
   return(
     <div className='timeline'>
-      <Filter />
+      <Filter options={[...new Set(options)]} />
       <div className='line'></div>
       { lifeEvents.map(({id, title, date, section, desc, stack} : LifeEvent) =>
         <TimeLineNode
