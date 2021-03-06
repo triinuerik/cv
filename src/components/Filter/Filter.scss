@@ -74,7 +74,24 @@
     border: 0.5px solid #8f8f8f;
     border-top: 0;
     padding: 5px;
+    
+    &:hover {
+      border: #484848;
+      background-color: #484848;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
   }
 
+  .active {
+    border: #484848;
+    background-color: #484848;
+    color: #FFFFFF;
+  }
 }
 
