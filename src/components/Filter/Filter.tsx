@@ -24,8 +24,13 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
       case 'Enter':
         if (activeSuggestion > -1) {
           addTag(suggestions[activeSuggestion]);
-        } else if (!tags.find((tag: string) => tag === newTag)) {
+        } else if (!!newTag && !tags.find((tag: string) => tag === newTag)) {
           addTag(newTag);
+        }
+        break;
+      case 'Backspace':
+        if (newTag.length === 0) {
+          removeTag(tags[tags.length - 1]);
         }
         break;
       case 'ArrowDown':
