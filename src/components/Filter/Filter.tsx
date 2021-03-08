@@ -37,14 +37,14 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
         event.preventDefault();
         const nextIndex = activeSuggestion + 1;
         if (nextIndex < suggestions.length) {
-          setActiveSuggestion(nextIndex)
+          setActiveSuggestion(nextIndex);
         }
         break;
       case 'ArrowUp':
         event.preventDefault();
         const prevIndex = activeSuggestion - 1;
         if (prevIndex >= -1) {
-          setActiveSuggestion(prevIndex)
+          setActiveSuggestion(prevIndex);
         }
         break;
       default:
@@ -68,14 +68,13 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
   }
 
   const getFilteredOptions = () => 
-    options.filter((option: string) => 
-      newTag.length > 0 && option.toLowerCase().indexOf(newTag.toLowerCase()) !== -1)
+    options.filter((option: string) => option.toLowerCase().indexOf(newTag.toLowerCase()) !== -1)
 
   return(
     <>
       <div className='filter'>
           { tags.map((tag) => 
-            <span className='tag' key='tag'>
+            <span className='tag' key={tag}>
               {tag}
               <span role='button' className='tag-remove-button' onClick={() => removeTag(tag)}><IoIosCloseCircleOutline /></span>
             </span> )}

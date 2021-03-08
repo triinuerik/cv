@@ -6,5 +6,6 @@ interface LifeEvent {
     date: string;
     section: string;
     desc?: string;
+    link?: string;
     stack?: string[];
 }

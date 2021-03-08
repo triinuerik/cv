@@ -1,12 +1,12 @@
 .about {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin: 1rem;
 
   .about-me-image {
     margin: 1rem;
-    width: 50%;
+    width: 40%;
   }
 }

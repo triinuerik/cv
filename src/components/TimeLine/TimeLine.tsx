@@ -23,7 +23,7 @@ export const TimeLine: React.FC<Props> = ({ lifeEvents }) => {
         .filter((lifeEvent: LifeEvent) => selectedFilters.length 
           ? lifeEvent.stack?.some((tag: string) => selectedFilters.includes(tag)) 
           : lifeEvent)
-        .map(({id, title, date, section, desc, stack} : LifeEvent) =>
+        .map(({id, title, date, section, desc, link, stack} : LifeEvent) =>
           <TimeLineNode
             key={id}
             id={id}
@@ -31,6 +31,7 @@ export const TimeLine: React.FC<Props> = ({ lifeEvents }) => {
             date={date}
             section={section}
             desc={desc}
+            link={link}
             stack={stack} />
       )}
     </div>
