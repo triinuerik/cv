@@ -99,9 +99,9 @@ export const lifeEvents = [
             'Python 3', 'Jest', 'Enzyme']
     },
     {
-        id: 12,
+        id: 13,
         title: 'Promotion to Software Engineer at MicroStrategy',
-        date: '04/11/2019',
+        date: '01/02/2021',
         section: 'Work',
         desc: 'I was promoted to a mid-level position and started a project to develop a plugin to MicroStrategy\'s desktop \
         application to run Python scripts on user\'s local machine.',
