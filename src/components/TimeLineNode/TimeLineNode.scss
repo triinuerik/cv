@@ -5,7 +5,7 @@
   justify-content: flex-start;
 
   .node-content {
-    max-width: 70%;
+    max-width: 80%;
     margin-left: 1rem;
 
     .title {
@@ -19,8 +19,13 @@
     }
 
     .link {
-      margin-bottom: 50px;
+      color: #9f9f9f;
+      padding-bottom: 50px;
     }
+  }
+
+  &:last-child {
+    padding-bottom: 5rem;
   }
 }
 

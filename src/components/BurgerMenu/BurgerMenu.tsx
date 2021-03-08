@@ -18,7 +18,6 @@ export const BurgerMenu: React.FC = () => {
       <Menu right isOpen={isOpen} onStateChange={state => setIsOpen(state.isOpen)}>
         <Link to="/" onClick={handleClick} className={`nav-item ${isActiveLink('/')}`}>CV</Link>
         <Link to="/about" onClick={handleClick} className={`nav-item ${isActiveLink('/about')}`}>About me</Link>
-        <Link to="/contact" onClick={handleClick} className={`nav-item ${isActiveLink('/contact')}`}>Contact</Link>
       </Menu>
   )
 }

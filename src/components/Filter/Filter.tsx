@@ -63,12 +63,13 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
   const removeTag = (removedTag: string) => setTags(tags.filter((tag: string) => tag !== removedTag))
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setNewTag((event.target as HTMLInputElement).value);
-    setSuggestions(getFilteredOptions())
+    const { value } = event.target as HTMLInputElement;
+    setNewTag(value);
+    setSuggestions(getFilteredOptions(value))
   }
 
-  const getFilteredOptions = () => 
-    options.filter((option: string) => option.toLowerCase().indexOf(newTag.toLowerCase()) !== -1)
+  const getFilteredOptions = (stringToMatch: string) => 
+    options.filter((option: string) => option.toLowerCase().includes(stringToMatch.toLowerCase()))
 
   return(
     <>
