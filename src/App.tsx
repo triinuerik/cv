@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { lifeEvents } from './life-events';
 import { TimeLine } from './components/TimeLine/TimeLine';
 import { Header } from './components/Header/Header';
-import { Contact } from './components/Contact/Contact';
 import { About } from './components/About/About';
 import { BurgerMenu } from './components/BurgerMenu/BurgerMenu';
 import './App.css';
@@ -20,9 +19,6 @@ const App: React.FC = () => {
           </Route>
           <Route path="/about">
             <About />
-          </Route>
-          <Route path="/contact">
-            <Contact />
           </Route>
         </Switch>
       </Router>
