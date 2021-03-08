@@ -7,7 +7,7 @@ import './About.scss';
 export const About: React.FC = () => {
   return (
     <div className='about'>
-      <img src={AboutMeImage} alt='Picture of Triinu Erik' className='about-me-image' />
+      <img src={AboutMeImage} alt='Author, Triinu Erik' className='about-me-image' />
       <div className='about-me-text'>
         <p>
           Hello, I'm Triinu.
@@ -26,11 +26,11 @@ export const About: React.FC = () => {
           </div>
           <div className='contact-row'>
             <div className='contact-icon'><IoLogoLinkedin /></div>
-            <a href='https://www.linkedin.com/in/triinu-erik/' target='_blank'>https://www.linkedin.com/in/triinu-erik/</a>
+            <a href='https://www.linkedin.com/in/triinu-erik/' target='_blank' rel='noreferrer'>https://www.linkedin.com/in/triinu-erik/</a>
           </div>
           <div className='contact-row'>
             <div className='contact-icon'><IoLogoGithub /></div>
-            <a href='https://github.com/triinuerik' target='_blank'>https://github.com/triinuerik</a>
+            <a href='https://github.com/triinuerik' target='_blank' rel='noreferrer'>https://github.com/triinuerik</a>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
 
   useEffect(() => {
     onFiltersChange(tags);
-  }, [tags])
+  }, [tags, onFiltersChange])
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     switch (event.key) {
