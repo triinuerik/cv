@@ -52,6 +52,12 @@
     .about-me-text {
       margin: 1rem;
       width: 80%;
+      text-align: center;
+
+      .contact {
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 }

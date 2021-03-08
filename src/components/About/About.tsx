@@ -26,11 +26,11 @@ export const About: React.FC = () => {
           </div>
           <div className='contact-row'>
             <div className='contact-icon'><IoLogoLinkedin /></div>
-            <a href='https://www.linkedin.com/in/triinu-erik/' target='_blank' rel='noreferrer'>https://www.linkedin.com/in/triinu-erik/</a>
+            <a href='https://www.linkedin.com/in/triinu-erik/' target='_blank' rel='noreferrer'>linkedin.com/in/triinu-erik/</a>
           </div>
           <div className='contact-row'>
             <div className='contact-icon'><IoLogoGithub /></div>
-            <a href='https://github.com/triinuerik' target='_blank' rel='noreferrer'>https://github.com/triinuerik</a>
+            <a href='https://github.com/triinuerik' target='_blank' rel='noreferrer'>github.com/triinuerik</a>
           </div>
         </div>
       </div>
