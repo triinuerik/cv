@@ -1,10 +1,21 @@
 .node {
+  width: auto;
+  height: auto;
   margin: 2rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal; 
+  -webkit-flex-direction: row; 
+  -ms-flex-direction: row; 
   flex-direction: row;
   justify-content: flex-start;
 
   .node-content {
+    width: auto;
+    height: auto;
     max-width: 80%;
     margin-left: 1rem;
 
@@ -32,6 +43,11 @@
 @media only screen and (max-width: 640px) {
 
   .node {
+    flex: 1;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal; 
+    -webkit-flex-direction: column; 
+    -ms-flex-direction: column; 
     flex-direction: column;
     justify-content: center;
 

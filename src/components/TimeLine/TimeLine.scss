@@ -2,7 +2,14 @@
   width: 70%;
   height: 100%;
   margin: 0 auto;
-  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; 
+  -webkit-box-orient: horizontal; 
+  -webkit-box-direction: normal; 
+  -webkit-flex-direction: column; 
+  -ms-flex-direction: column; 
   flex-direction: column;
 }
 

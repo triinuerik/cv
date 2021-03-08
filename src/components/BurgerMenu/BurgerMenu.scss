@@ -77,8 +77,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   &:focus {
     /* Provide a fallback style for browsers
        that don't support :focus-visible */
-    outline: none;
-    background: lightgrey;
+    outline: 2px solid -webkit-focus-ring-color;
+    background: transparent;
   }
   
   &:focus:not(:focus-visible) {
