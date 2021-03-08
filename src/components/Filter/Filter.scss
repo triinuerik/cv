@@ -8,28 +8,11 @@
   flex-wrap: wrap;
   padding: 3px;
 
-
-  &:focus {
+  &:focus-within {
     /* Provide a fallback style for browsers
        that don't support :focus-visible */
-    outline: none;
-    border: none;
-    background: lightgrey;
-  }
-  
-  &:focus:not(:focus-visible) {
-    /* Remove the focus indicator on mouse-focus for browsers
-       that do support :focus-visible */
-    background: transparent;
-  }
-  
-  &:focus-visible {
-    /* Draw a very noticeable focus style for
-       keyboard-focus on browsers that do support
-       :focus-visible */
-    outline: 2px solid -webkit-focus-ring-color;
-    background: transparent;
-  }
+       box-shadow: 0 5px 7px #90aac6;
+      }
 
   .tag {
     background-color: #484848;
@@ -74,6 +57,7 @@
     border: 0.5px solid #8f8f8f;
     border-top: 0;
     padding: 5px;
+    background-color: #FFFFFF;
     
     &:hover {
       border: #484848;

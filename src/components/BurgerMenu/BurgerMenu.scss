@@ -71,7 +71,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   -webkit-tap-highlight-color: transparent;
 
   &.active {
-    font-weight: 600;
+    font-weight: 800;
   }
 
   &:focus {
@@ -84,6 +84,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   &:focus:not(:focus-visible) {
     /* Remove the focus indicator on mouse-focus for browsers
        that do support :focus-visible */
+    outline: none;
     background: transparent;
   }
   
