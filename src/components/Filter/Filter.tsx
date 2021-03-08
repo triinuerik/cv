@@ -91,7 +91,6 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
         { suggestions.map((matchedOption: string, index) => 
           <li key={matchedOption}
             className={`suggestion-item ${index === activeSuggestion && 'active' }`} 
-            tabIndex={0} 
             onClick={() => addTag(matchedOption)}
           >
             { matchedOption }
