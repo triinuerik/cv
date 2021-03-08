@@ -52,7 +52,11 @@
     .about-me-text {
       margin: 1rem;
       width: 90%;
-      text-align: center;
+      text-align: justify;
+
+      .about-me-title {
+        text-align: center;
+      }
 
       .contact {
         align-items: center;

@@ -9,7 +9,7 @@ export const About: React.FC = () => {
     <div className='about'>
       <img src={AboutMeImage} alt='Author, Triinu Erik' className='about-me-image' />
       <div className='about-me-text'>
-        <h2>About me</h2>
+        <h2 className='about-me-title'>About me</h2>
         <p>
           Hello, I'm Triinu.
           I'm a front-end developer with 2 years of experience in building web applications.

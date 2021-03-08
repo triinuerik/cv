@@ -11,7 +11,7 @@ export const TimeLineNode: React.FC<LifeEvent> = ({ id, title, date, section, de
       <div className='node-content'>
         <h1 className='title'>{title}</h1>
         <h2 className='date'>{date}</h2>
-        <p>{desc}</p>
+        <p className='description'>{desc}</p>
         { link && <a className='link' href={link} rel='noreferrer'>{link}</a> }
         <Stack stack={stack}/>
       </div>
