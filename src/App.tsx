@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { lifeEvents } from './life-events';
 import { TimeLine } from './components/TimeLine/TimeLine';
 import { Header } from './components/Header/Header';

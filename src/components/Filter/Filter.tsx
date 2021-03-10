@@ -10,7 +10,7 @@ interface FilterProps {
 
 export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
   const [tags, setTags] = useState([]);
-  const [newTag, setNewTag] = useState('');
+  const [newTag, setNewTag] = useState(''); // remove?
   const [suggestions, setSuggestions] = useState([]);
   const [activeSuggestion, setActiveSuggestion] = useState(-1);
   const inputRef = useRef(null);
@@ -52,7 +52,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
         }
         break;
       default:
-        break;
+        break; // necessary?
     }
   }
 
@@ -64,13 +64,13 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
     setActiveSuggestion(-1);
   }
 
-  const removeTag = (removedTag: string) => setTags(tags.filter((tag: string) => tag !== removedTag))
-
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target as HTMLInputElement;
     setNewTag(value);
     setSuggestions(getFilteredOptions(value))
   }
+
+  const removeTag = (removedTag: string) => setTags(tags.filter((tag: string) => tag !== removedTag))
 
   const getFilteredOptions = (stringToMatch: string) => 
     options.filter((option: string) => option.toLowerCase().includes(stringToMatch.toLowerCase()))
@@ -78,10 +78,12 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
   return(
     <>
       <div className='filter'>
-        { tags.map((tag) => 
+        { tags.map((tag: string) => 
           <span className='tag' key={tag}>
-            {tag}
-            <span role='button' className='tag-remove-button' onClick={() => removeTag(tag)}><IoIosCloseCircleOutline /></span>
+            { tag }
+            <span role='button' className='tag-remove-button' onClick={() => removeTag(tag)}>
+              <IoIosCloseCircleOutline />
+            </span>
           </span> )}
         <input
           ref={inputRef}
@@ -93,8 +95,9 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
         />
       </div>
       <ul className='suggestions'>
-        { suggestions.map((matchedOption: string, index) => 
-          <li key={matchedOption}
+        { suggestions.map((matchedOption: string, index: number) => 
+          <li 
+            key={matchedOption}
             className={`suggestion-item ${index === activeSuggestion && 'active' }`} 
             onClick={() => addTag(matchedOption)}
           >

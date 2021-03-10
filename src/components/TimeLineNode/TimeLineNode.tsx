@@ -14,10 +14,10 @@ export const TimeLineNode: React.FC<TimeLineNodeProps> = ({ lifeEvent }) => {
     <div className='node'>
       <Icon section={section} />
       <div className='node-content'>
-        <h1 className='title'>{title}</h1>
-        <h2 className='date'>{date}</h2>
-        <p className='description'>{desc}</p>
-        { link && <a className='link' href={link} rel='noreferrer'>{link}</a> }
+        <h1 className='node-title'>{title}</h1>
+        <h2 className='node-date'>{date}</h2>
+        <p className='node-description'>{desc}</p>
+        { link && <a className='node-link' href={link} rel='noreferrer'>{link}</a> }
         <Stack stack={stack}/>
       </div>
     </div>
