@@ -95,7 +95,7 @@ export const lifeEvents = [
         section: 'Work',
         desc: 'I began working as a front-end developer creating web applications for one of the biggest BI companies in the world. \
         I developed integrations between MicroStrategy\'s platform and OneDrive and Box and a data connector between user\'s cloud environments.',
-        stack: ['React.js', 'JavaScript', 'Redux', 'SCSS',  'HTML',
+        stack: ['React.js', 'JavaScript', 'Redux', 'SCSS', 'CSS', 'HTML',
             'Python 3', 'Jest', 'Enzyme']
     },
     {
@@ -105,7 +105,7 @@ export const lifeEvents = [
         section: 'Work',
         desc: 'I was promoted to a mid-level position and started a project to develop a plugin to MicroStrategy\'s desktop \
         application to run Python scripts on user\'s local machine.',
-        stack: ['React.js', 'TypeScript', 'Redux', 'SCSS',  'HTML',
+        stack: ['React.js', 'TypeScript', 'Redux', 'SCSS', 'CSS', 'HTML',
             'Python 3', 'Jest', 'Enzyme']
     },
 ]
