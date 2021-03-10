@@ -1,16 +1,10 @@
 export const lifeEvents = [
     {
-        id: 0,
-        title: 'Born',
-        date: '31/12/1996',
-        section: 'Other',
-    },
-    {
         id: 1,
         title: 'High school graduation',
         date: '06/2016',
         section: 'Education',
-        desc: 'I graduated Tallinn School No 21, finishing my 12 years of education there.'
+        desc: 'I graduated Tallinn School No 21 with honors.'
     },
     {
         id: 2,
@@ -24,8 +18,7 @@ export const lifeEvents = [
         title: 'Summer internship at eKool',
         date: '01/08/2017',
         section: 'Work',
-        desc: 'After my first year of university studies, I started an internship at eKool as a full-stack software engineer. \
-        I developed small features and fixed bugs for one of the biggest education management tools and infosystems in Estonia.',
+        desc: 'After my first year of university studies, I started an internship at eKool as a full-stack software engineer. I developed small features and fixed bugs for one of the biggest education management tools and infosystems in Estonia.',
         stack: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate', 'JavaScript',
             'JQuery', 'Bootstrap CSS', 'HTML'],
     },
@@ -34,8 +27,7 @@ export const lifeEvents = [
         title: 'Work as Junior Developer at eKool',
         date: '01/11/2017 - 12/02/2018',
         section: 'Work',
-        desc: 'After completing my internship of 3 months, I was hired as a part-time Junior Developer. After working during one semester, \
-        I decided to leave the company to focus on my studies.',
+        desc: 'After completing my internship of 3 months, I was hired as a part-time Junior Developer. After working during one semester, I decided to leave the company to focus on my studies.',
         stack: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate', 'JavaScript',
             'JQuery', 'Bootstrap CSS', 'HTML']
     },
@@ -58,9 +50,7 @@ export const lifeEvents = [
         title: 'I18n and l10n of LaSuli Firefox extension',
         date: '03/2019 - 05/2019',
         section: 'Work',
-        desc: 'In spring of 2019 I worked on an open source Firefox web extension to aid researchers doing qualitative text analysis \
-        in the field of knowledge engineering. I was responsible for internationalizing and localizing the extension in 3 \
-        languages (English, French, Estonian).',
+        desc: 'In spring of 2019 I worked on an open source Firefox web extension to aid researchers doing qualitative text analysis in the field of knowledge engineering. I was responsible for internationalizing and localizing the extension in 3 languages (English, French, Estonian).',
         link: 'https://github.com/Hypertopic/LaSuli',
         stack: ['React.js', 'LinguiJS', 'i18n', 'l10n']
     },
@@ -69,9 +59,7 @@ export const lifeEvents = [
         title: 'Defense of bachelor\'s thesis',
         date: '27/08/2019',
         section: 'Education',
-        desc: 'I wrote my bachelor\'s thesis as a collaboration with both TalTech and UTT, having supervisors from both universities. \
-        I developed a steganography command-line tool called Stegote that allowed embedding information into JPG and PNG \
-        images in a visually undetectable manner and decoding it.',
+        desc: 'I wrote my bachelor\'s thesis as a collaboration with both Tallinn University of Technology and University of Technology of Troyes, having supervisors from both universities. I developed a steganography command-line tool called Stegote that allowed embedding information into JPG and PNG images in a visually undetectable manner and decoding it.',
         link: 'https://github.com/triinuerik/stegote',
         stack: ['Python 3', 'Numpy'],
     },
@@ -93,8 +81,7 @@ export const lifeEvents = [
         title: 'Work as Associate Software Engineer at MicroStrategy',
         date: '04/11/2019',
         section: 'Work',
-        desc: 'I began working as a front-end developer creating web applications for one of the biggest BI companies in the world. \
-        I developed integrations between MicroStrategy\'s platform and OneDrive and Box and a data connector between user\'s cloud environments.',
+        desc: 'I began working as a front-end developer creating web applications for one of the biggest BI companies in the world. I developed integrations between MicroStrategy\'s platform and OneDrive and Box and a data connector between user\'s cloud environments.',
         stack: ['React.js', 'JavaScript', 'Redux', 'SCSS', 'HTML',
             'Python 3', 'Jest', 'Enzyme']
     },
@@ -103,8 +90,7 @@ export const lifeEvents = [
         title: 'Promotion to Software Engineer at MicroStrategy',
         date: '01/02/2021',
         section: 'Work',
-        desc: 'I was promoted to a mid-level position and started a project to develop a plugin to MicroStrategy\'s desktop \
-        application to run Python scripts on user\'s local machine.',
+        desc: 'I was promoted to a mid-level position and started a project to develop a plugin to MicroStrategy\'s desktop application to run Python scripts on user\'s local machine.',
         stack: ['React.js', 'TypeScript', 'Redux', 'SCSS', 'HTML',
             'Python 3', 'Jest', 'Enzyme']
     },

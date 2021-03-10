@@ -1,13 +1,13 @@
 import React from 'react';
 import { IoIosBriefcase, IoIosSchool, IoIosPerson } from "react-icons/io";
-import './Icon.css'
+import './Icon.scss'
 
 
-interface Props {
+interface IconProps {
   section: string;
 }
 
-const Icon: React.FC<Props> = ({section}) => {
+const Icon: React.FC<IconProps> = ({section}) => {
   const renderIcon = () => {
     switch (section) {
       case 'Work':

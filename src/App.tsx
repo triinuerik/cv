@@ -11,8 +11,8 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Router>
-        <BurgerMenu />
         <Header />
+        <BurgerMenu />
         <Switch>
           <Route exact path="/">
             <TimeLine lifeEvents={[...lifeEvents].reverse()} />

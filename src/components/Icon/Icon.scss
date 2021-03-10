@@ -1,0 +1,31 @@
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  background-color: #EB7085;
+  border-radius: 50%;
+}
+
+.Education {
+  background-color: #FFBA49;
+}
+
+.Work {
+  background-color: #75C9C8;
+}
+
+svg {
+  width: 70%;
+  height: 70%;
+}
+
+@media only screen and (max-width: 640px) {
+  .circle {
+    float: unset;
+    margin: 0 auto;
+    height: 4rem;
+    width: 4rem;
+  }
+}

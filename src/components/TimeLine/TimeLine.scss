@@ -13,7 +13,22 @@
   flex-direction: column;
 
   .timeline-nodes {
-    padding:0.3rem;
+    padding: 0.3rem;
+
+    &:focus {
+      /* Provide a fallback style for browsers
+         that don't support :focus-visible */
+      outline: none;
+      background: transparent;
+    }
+    
+    &:focus-visible {
+      /* Draw a very noticeable focus style for
+         keyboard-focus on browsers that do support
+         :focus-visible */
+      outline: 2px solid -webkit-focus-ring-color;
+      background: transparent;
+    }
   }
 }
 

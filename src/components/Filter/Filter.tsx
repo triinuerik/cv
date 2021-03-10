@@ -78,19 +78,19 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
   return(
     <>
       <div className='filter'>
-          { tags.map((tag) => 
-            <span className='tag' key={tag}>
-              {tag}
-              <span role='button' className='tag-remove-button' onClick={() => removeTag(tag)}><IoIosCloseCircleOutline /></span>
-            </span> )}
-          <input
-            ref={inputRef}
-            type='text'
-            aria-label='Input tags to filter timeline'
-            placeholder={!tags.length ? 'Enter tags to filter by...' : ''}
-            onKeyDown={handleKeyDown} 
-            onChange={handleChange}
-          />
+        { tags.map((tag) => 
+          <span className='tag' key={tag}>
+            {tag}
+            <span role='button' className='tag-remove-button' onClick={() => removeTag(tag)}><IoIosCloseCircleOutline /></span>
+          </span> )}
+        <input
+          ref={inputRef}
+          type='text'
+          aria-label='Input tags to filter timeline'
+          placeholder={!tags.length ? 'Enter tags to filter by...' : ''}
+          onKeyDown={handleKeyDown} 
+          onChange={handleChange}
+        />
       </div>
       <ul className='suggestions'>
         { suggestions.map((matchedOption: string, index) => 

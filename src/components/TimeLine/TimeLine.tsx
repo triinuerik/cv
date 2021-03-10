@@ -11,18 +11,19 @@ interface Props {
 export const TimeLine: React.FC<Props> = ({ lifeEvents }) => {
   const [selectedFilters, setSelectedFilters] = useState([]);
 
-  const options = lifeEvents
-    .flatMap(lifeEvent => lifeEvent.stack)
-    .filter(stack => !!stack);
+  const getUniqueOptions = () => 
+    new Set(lifeEvents
+      .flatMap(lifeEvent => lifeEvent.stack)
+      .filter(stack => !!stack))
 
   return(
     <div className='timeline'>
-      <Filter options={[...new Set(options)]} onFiltersChange={(filters: string[]) => setSelectedFilters(filters)} />
+      <Filter options={[...getUniqueOptions()]} onFiltersChange={(filters: string[]) => setSelectedFilters(filters)} />
       <div className='timeline-nodes' tabIndex={0}>
         { lifeEvents
           .filter((lifeEvent: LifeEvent) => selectedFilters.length 
             ? lifeEvent.stack?.some((tag: string) => selectedFilters.includes(tag)) 
-            : lifeEvent)
+            : true)
           .map((lifeEvent : LifeEvent) => <TimeLineNode lifeEvent={lifeEvent} key={lifeEvent.id}/>
         )}
       </div>
