@@ -1,7 +1,7 @@
 export const lifeEvents = [
     {
         id: 0,
-        title: 'Birth',
+        title: 'Born',
         date: '31/12/1996',
         section: 'Other',
     },

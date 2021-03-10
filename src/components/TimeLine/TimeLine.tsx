@@ -18,22 +18,14 @@ export const TimeLine: React.FC<Props> = ({ lifeEvents }) => {
   return(
     <div className='timeline'>
       <Filter options={[...new Set(options)]} onFiltersChange={(filters: string[]) => setSelectedFilters(filters)} />
-      <div className='line'></div>
-      { lifeEvents
-        .filter((lifeEvent: LifeEvent) => selectedFilters.length 
-          ? lifeEvent.stack?.some((tag: string) => selectedFilters.includes(tag)) 
-          : lifeEvent)
-        .map(({id, title, date, section, desc, link, stack} : LifeEvent) =>
-          <TimeLineNode
-            key={id}
-            id={id}
-            title={title}
-            date={date}
-            section={section}
-            desc={desc}
-            link={link}
-            stack={stack} />
-      )}
+      <div className='timeline-nodes' tabIndex={0}>
+        { lifeEvents
+          .filter((lifeEvent: LifeEvent) => selectedFilters.length 
+            ? lifeEvent.stack?.some((tag: string) => selectedFilters.includes(tag)) 
+            : lifeEvent)
+          .map((lifeEvent : LifeEvent) => <TimeLineNode lifeEvent={lifeEvent} key={lifeEvent.id}/>
+        )}
+      </div>
     </div>
   )
 }

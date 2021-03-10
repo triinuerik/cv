@@ -33,6 +33,10 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
           removeTag(tags[tags.length - 1]);
         }
         break;
+      case 'Escape':
+        setSuggestions([]);
+        setActiveSuggestion(-1);
+        break;
       case 'ArrowDown':
         event.preventDefault();
         const nextIndex = activeSuggestion + 1;
@@ -81,10 +85,11 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
             </span> )}
           <input
             ref={inputRef}
-            type='text' 
+            type='text'
+            aria-label='Input tags to filter timeline'
             placeholder={!tags.length ? 'Enter tags to filter by...' : ''}
             onKeyDown={handleKeyDown} 
-            onChange={handleChange} 
+            onChange={handleChange}
           />
       </div>
       <ul className='suggestions'>

@@ -4,7 +4,12 @@ import { Stack } from '../Stack/Stack';
 import './TimeLineNode.scss'
 
 
-export const TimeLineNode: React.FC<LifeEvent> = ({ id, title, date, section, desc, link, stack }) => {
+interface TimeLineNodeProps {
+  lifeEvent: LifeEvent;
+}
+
+export const TimeLineNode: React.FC<TimeLineNodeProps> = ({ lifeEvent }) => {
+  const { id, title, date, section, desc, link, stack } = lifeEvent;
   return (
     <div className='node'>
       <Icon section={section} />
