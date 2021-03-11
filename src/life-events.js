@@ -35,7 +35,7 @@ export const lifeEvents = [
         id: 6,
         title: 'Moved to Troyes, France',
         date: '01/08/2018',
-        section: 'Other',
+        section: 'Personal',
     },
     {
         id: 7,
@@ -74,7 +74,7 @@ export const lifeEvents = [
         id: 11,
         title: 'Moved to Warsaw, Poland',
         date: '25/10/2019',
-        section: 'Other',
+        section: 'Personal',
     },
     {
         id: 12,

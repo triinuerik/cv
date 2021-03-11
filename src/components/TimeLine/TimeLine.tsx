@@ -11,20 +11,27 @@ interface Props {
 export const TimeLine: React.FC<Props> = ({ lifeEvents }) => {
   const [selectedFilters, setSelectedFilters] = useState([]);
 
-  const getUniqueOptions = () => 
-    new Set(lifeEvents
-      .flatMap(lifeEvent => lifeEvent.stack)
-      .filter(stack => !!stack))
+  const getUniqueOptions = () => {
+    const allOptions = lifeEvents.flatMap(lifeEvent => {
+      if (lifeEvent.stack) {
+        return [...lifeEvent.stack, lifeEvent.section]
+      }
+      return [lifeEvent.section]
+    })
+    return [...new Set(allOptions)]
+  }
+
+  const getFiltredNodes = () => 
+    lifeEvents.filter((lifeEvent: LifeEvent) => selectedFilters.length 
+      ? selectedFilters.some((tag: string) => lifeEvent.stack?.includes(tag) || lifeEvent.section === tag) 
+      : true)
 
   return(
     <div className='timeline'>
-      <Filter options={[...getUniqueOptions()]} onFiltersChange={(filters: string[]) => setSelectedFilters(filters)} />
+      <Filter options={getUniqueOptions()} onFiltersChange={(filters: string[]) => setSelectedFilters(filters)} />
       <div className='timeline-nodes' tabIndex={0}>
-        { lifeEvents
-          .filter((lifeEvent: LifeEvent) => selectedFilters.length 
-            ? lifeEvent.stack?.some((tag: string) => selectedFilters.includes(tag)) 
-            : true)
-          .map((lifeEvent : LifeEvent) => <TimeLineNode lifeEvent={lifeEvent} key={lifeEvent.id}/>
+        { getFiltredNodes().map((lifeEvent : LifeEvent) => 
+          <TimeLineNode lifeEvent={lifeEvent} key={lifeEvent.id}/>
         )}
       </div>
     </div>
