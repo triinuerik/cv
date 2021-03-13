@@ -15,26 +15,8 @@
     margin: 1rem;
     width: 40%;
 
-    .contact {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      margin: 2rem 0;
-      
-      .contact-row {
-        display: flex;
-        flex-direction: row;
-    
-        .contact-icon {
-          height: 30px;
-          width: 30px;
-        }
-
-        a {
-          color: #727272
-        }
-      }
+    a {
+      color: #727272
     }
   }
 }
@@ -56,11 +38,6 @@
 
       .about-me-title {
         text-align: center;
-      }
-
-      .contact {
-        align-items: center;
-        justify-content: center;
       }
     }
   }

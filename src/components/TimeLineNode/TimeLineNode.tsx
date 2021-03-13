@@ -9,7 +9,7 @@ interface TimeLineNodeProps {
 }
 
 export const TimeLineNode: React.FC<TimeLineNodeProps> = ({ lifeEvent }) => {
-  const { id, title, date, section, desc, link, stack } = lifeEvent;
+  const { title, date, section, desc, link, stack } = lifeEvent;
   return (
     <div className='node'>
       <Icon section={section} />

@@ -81,7 +81,7 @@ export const lifeEvents = [
         title: 'Work as Associate Software Engineer at MicroStrategy',
         date: '04/11/2019',
         section: 'Work',
-        desc: 'I began working as a front-end developer creating web applications for one of the biggest BI companies in the world. I developed integrations between MicroStrategy\'s platform and OneDrive and Box and a data connector between user\'s cloud environments.',
+        desc: 'I began working as a front-end developer creating web applications for one of the biggest BI companies in the world. I developed integrations between MicroStrategy\'s platform and OneDrive and Box and a data connector between user\'s cloud environments. My responsibilities included developing, testing and implementing React web applications consuming both internal and third-party REST APIs. I worked closely with UX team, implementing UI based on mockups. I wrote unit and automation tests and collaborated with international teams in scrum.',
         stack: ['React.js', 'JavaScript', 'Redux', 'SCSS',
             'Python 3', 'Jest', 'Enzyme']
     },
