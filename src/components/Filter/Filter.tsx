@@ -12,14 +12,14 @@ interface FilterProps {
 }
 
 export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
-  const [tags, setTags] = useState([]);
+  const [tags, setTags] = useState(['Work', 'JavaScript']);
   const [suggestions, setSuggestions] = useState([]);
   const [activeSuggestion, setActiveSuggestion] = useState(-1);
   const inputRef = useRef(null);
 
   useEffect(() => {
     onFiltersChange(tags);
-  }, [tags, onFiltersChange])
+  }, [tags])
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     const newTag = (event.target as HTMLInputElement).value;
