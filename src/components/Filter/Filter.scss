@@ -35,6 +35,21 @@
       justify-content: center;
       align-items: center;
     }
+
+    &.Work {
+      background-color: #75C9C8;
+      color: #000000;
+    }
+
+    &.Education {
+      background-color: #FFBA49;
+      color: #000000;
+    }
+
+    &.Personal {
+      background-color: #EB7085;
+      color: #000000;
+    }
   }
 
   input {

@@ -6,14 +6,14 @@
   width: 5rem;
   background-color: #EB7085;
   border-radius: 50%;
-}
 
-.Education {
-  background-color: #FFBA49;
-}
-
-.Work {
-  background-color: #75C9C8;
+  &.Education {
+    background-color: #FFBA49;
+  }
+  
+  &.Work {
+    background-color: #75C9C8;
+  }
 }
 
 svg {

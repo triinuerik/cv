@@ -2,15 +2,16 @@ import React, { useState, useRef, useEffect } from 'react';
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import './Filter.scss';
 
+
+const SECTION_TAGS = ['Work', 'Education', 'Personal'];
+
 interface FilterProps {
   options: string[];
   onFiltersChange: (filters: string[]) => void;
 }
 
-
 export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
   const [tags, setTags] = useState([]);
-  const [newTag, setNewTag] = useState(''); // remove?
   const [suggestions, setSuggestions] = useState([]);
   const [activeSuggestion, setActiveSuggestion] = useState(-1);
   const inputRef = useRef(null);
@@ -20,6 +21,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
   }, [tags, onFiltersChange])
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    const newTag = (event.target as HTMLInputElement).value;
     switch (event.key) {
       case 'Enter':
         if (activeSuggestion > -1) {
@@ -51,23 +53,19 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
           setActiveSuggestion(prevIndex);
         }
         break;
-      default:
-        break; // necessary?
     }
+  }
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target as HTMLInputElement;
+    setSuggestions(getFilteredOptions(value))
   }
 
   const addTag = (tag: string) => {
     inputRef.current.value = '';
     setTags([...tags, tag]);
-    setNewTag('');
     setSuggestions([]);
     setActiveSuggestion(-1);
-  }
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = event.target as HTMLInputElement;
-    setNewTag(value);
-    setSuggestions(getFilteredOptions(value))
   }
 
   const removeTag = (removedTag: string) => setTags(tags.filter((tag: string) => tag !== removedTag))
@@ -79,7 +77,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
     <>
       <div className='filter'>
         { tags.map((tag: string) => 
-          <span className='tag' key={tag}>
+          <span className={`tag ${SECTION_TAGS.includes(tag) && tag}`} key={tag}>
             { tag }
             <span role='button' className='tag-remove-button' onClick={() => removeTag(tag)}>
               <IoIosCloseCircleOutline />
@@ -98,7 +96,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
         { suggestions.map((matchedOption: string, index: number) => 
           <li 
             key={matchedOption}
-            className={`suggestion-item ${index === activeSuggestion && 'active' }`} 
+            className={`suggestion-item ${index === activeSuggestion && 'active'}`} 
             onClick={() => addTag(matchedOption)}
           >
             { matchedOption }

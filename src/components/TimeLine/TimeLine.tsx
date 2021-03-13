@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { TimeLineNode } from '../TimeLineNode/TimeLineNode';
 import { Filter } from '../Filter/Filter';
+import { TimeLineNode } from '../TimeLineNode/TimeLineNode';
 import './TimeLine.scss'
 
 
@@ -23,7 +23,7 @@ export const TimeLine: React.FC<Props> = ({ lifeEvents }) => {
 
   const getFiltredNodes = () => 
     lifeEvents.filter((lifeEvent: LifeEvent) => selectedFilters.length 
-      ? selectedFilters.some((tag: string) => lifeEvent.stack?.includes(tag) || lifeEvent.section === tag) 
+      ? selectedFilters.every((tag: string) => lifeEvent.stack?.includes(tag) || lifeEvent.section === tag) 
       : true)
 
   return(
