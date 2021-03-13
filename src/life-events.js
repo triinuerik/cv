@@ -52,7 +52,7 @@ export const lifeEvents = [
         section: 'Work',
         desc: 'In spring of 2019 I worked on an open source Firefox web extension to aid researchers doing qualitative text analysis in the field of knowledge engineering. I was responsible for internationalizing and localizing the extension in 3 languages (English, French, Estonian).',
         link: 'https://github.com/Hypertopic/LaSuli',
-        stack: ['React.js', 'LinguiJS', 'i18n', 'l10n']
+        stack: ['React.js', 'JavaScript', 'LinguiJS', 'i18n', 'l10n']
     },
     {
         id: 9,

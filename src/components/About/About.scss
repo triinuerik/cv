@@ -5,38 +5,68 @@
   justify-content: center;
   margin: 1rem;
 
-  .about-me-image {
+  .about-image {
     margin: 1rem;
     max-width: 35%;
     max-height: 60vh;
   }
 
-  .about-me-text {
+  .about-text {
     margin: 1rem;
     width: 40%;
 
     a {
       color: #727272
     }
+
+    .cv-button-container {
+      margin-top: 2rem;
+
+      .cv-button {
+        font-weight: 600;
+        border-radius: 5px;
+        // background-color: #484848;
+        border: 1px solid #484848;
+        color: #000000;
+        white-space: nowrap;
+        padding: 9px;
+        text-decoration: none;
+
+        &:hover {
+          animation: enterHover 0.5s forwards;
+        }
+        
+        @keyframes enterHover {
+          to {
+            background-color: #484848;
+            color: #FFFFFF;
+          }
+        }
+      }
+    } 
   }
 }
 
 
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 800px) {
   .about {
     flex-direction: column;
 
-    .about-me-image {
+    .about-image {
       max-width: 60%;
     }
   
-    .about-me-text {
+    .about-text {
       margin: 1rem;
       width: 90%;
       text-align: justify;
 
-      .about-me-title {
+      .about-title {
+        text-align: center;
+      }
+
+      .cv-button-container {
         text-align: center;
       }
     }
