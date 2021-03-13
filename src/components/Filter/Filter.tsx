@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import OutsideClickHandler from 'react-outside-click-handler';
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import './Filter.scss';
 
@@ -74,7 +75,10 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
     options.filter((option: string) => option.toLowerCase().includes(stringToMatch.toLowerCase()))
 
   return(
-    <>
+    <OutsideClickHandler onOutsideClick={() => {
+      setSuggestions([]);
+      setActiveSuggestion(-1);
+    }}>
       <div className='filter'>
         { tags.map((tag: string) => 
           <span className={`tag ${SECTION_TAGS.includes(tag) && tag}`} key={tag}>
@@ -103,6 +107,6 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
           </li>
         )}
       </ul>
-    </>
+    </OutsideClickHandler>
   )
 }
