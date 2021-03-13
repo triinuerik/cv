@@ -27,7 +27,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
       case 'Enter':
         if (activeSuggestion > -1) {
           addTag(suggestions[activeSuggestion]);
-        } else if (!!newTag && !tags.find((tag: string) => tag === newTag)) {
+        } else {
           addTag(newTag);
         }
         break;
@@ -62,17 +62,27 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
     setSuggestions(getFilteredOptions(value))
   }
 
-  const addTag = (tag: string) => {
-    inputRef.current.value = '';
-    setTags([...tags, tag]);
-    setSuggestions([]);
-    setActiveSuggestion(-1);
+  const addTag = (newTag: string) => {
+    if (!!newTag && !tags.find((tag: string) => tag === newTag)) {
+      inputRef.current.value = '';
+      setTags([...tags, newTag]);
+      setSuggestions([]);
+      setActiveSuggestion(-1);
+    } else {
+      blinkError();
+    }
   }
 
   const removeTag = (removedTag: string) => setTags(tags.filter((tag: string) => tag !== removedTag))
 
   const getFilteredOptions = (stringToMatch: string) => 
     options.filter((option: string) => option.toLowerCase().includes(stringToMatch.toLowerCase()))
+
+  const blinkError = () => {
+    inputRef.current.classList.remove('error-blink');
+    void inputRef.current.offsetWidth;
+    inputRef.current.classList.add('error-blink');
+  }
 
   return(
     <OutsideClickHandler onOutsideClick={() => {
@@ -94,6 +104,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
           placeholder={!tags.length ? 'Enter tags to filter by...' : ''}
           onKeyDown={handleKeyDown} 
           onChange={handleChange}
+          onFocus={handleChange}
         />
       </div>
       <ul className='suggestions'>

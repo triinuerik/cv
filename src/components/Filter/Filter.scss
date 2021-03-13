@@ -9,11 +9,8 @@
   padding: 3px;
 
   &:focus-within {
-    /* Provide a fallback style for browsers
-       that don't support :focus-visible */
-      //  border: 2px solid #42ecf2;
-       box-shadow: 0 3px 5px #899191;
-      }
+    box-shadow: 0 3px 5px #899191;
+  }
 
   .tag {
     background-color: #484848;
@@ -60,6 +57,24 @@
     flex-grow: 1;
   }
 
+  .error-blink {
+    animation: blinker 1s;
+  }
+  
+  @keyframes blinker {
+    5% {
+      color: #FF0000;
+    }
+
+    50% {
+      color: #FF0000;
+      opacity: 0;
+    }
+
+    70% {
+      color: #FF0000;
+    }
+  }
 }
 
 .suggestions {
