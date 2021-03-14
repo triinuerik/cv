@@ -1,20 +1,20 @@
 export const lifeEvents = [
     {
-        id: 1,
+        id: 0,
         title: 'High school graduation',
         date: '06/2016',
         section: 'Education',
         desc: 'I graduated Tallinn School No 21 with honors.'
     },
     {
-        id: 2,
+        id: 1,
         title: 'Start of University studies',
         date: '09/2016',
         section: 'Education',
         desc: 'I started my bachelor studies in Informatics in Tallinn University of Technology.'
     },
     {
-        id: 3,
+        id: 2,
         title: 'Summer internship at eKool',
         date: '01/08/2017',
         section: 'Work',
@@ -23,7 +23,7 @@ export const lifeEvents = [
             'JQuery', 'Bootstrap CSS', 'HTML'],
     },
     {
-        id: 4,
+        id: 3,
         title: 'Work as Junior Developer at eKool',
         date: '01/11/2017 - 12/02/2018',
         section: 'Work',
@@ -32,13 +32,13 @@ export const lifeEvents = [
             'JQuery', 'Bootstrap CSS', 'HTML']
     },
     {
-        id: 6,
+        id: 4,
         title: 'Moved to Troyes, France',
         date: '01/08/2018',
         section: 'Personal',
     },
     {
-        id: 7,
+        id: 5,
         title: 'Year abroad as an exchange student in France',
         date: '01/09/2018',
         section: 'Education',
@@ -46,7 +46,7 @@ export const lifeEvents = [
         as an exhange student wtih the Erasmus programme.'
     },
     {
-        id: 8,
+        id: 6,
         title: 'I18n and l10n of LaSuli Firefox extension',
         date: '03/2019 - 05/2019',
         section: 'Work',
@@ -55,7 +55,7 @@ export const lifeEvents = [
         stack: ['React.js', 'JavaScript', 'LinguiJS', 'i18n', 'l10n']
     },
     {
-        id: 9,
+        id: 7,
         title: 'Defense of bachelor\'s thesis',
         date: '27/08/2019',
         section: 'Education',
@@ -64,20 +64,20 @@ export const lifeEvents = [
         stack: ['Python 3', 'Numpy'],
     },
     {
-        id: 10,
+        id: 8,
         title: 'Graduation with BSc in Informatics, cum laude',
         date: '28/08/2019',
         section: 'Education',
         desc: ''
     },
     {
-        id: 11,
+        id: 9,
         title: 'Moved to Warsaw, Poland',
         date: '25/10/2019',
         section: 'Personal',
     },
     {
-        id: 12,
+        id: 10,
         title: 'Work as Associate Software Engineer at MicroStrategy',
         date: '04/11/2019',
         section: 'Work',
@@ -86,7 +86,7 @@ export const lifeEvents = [
             'Python 3', 'Jest', 'Enzyme']
     },
     {
-        id: 13,
+        id: 11,
         title: 'Promotion to Software Engineer at MicroStrategy',
         date: '01/02/2021',
         section: 'Work',
