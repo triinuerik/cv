@@ -20,7 +20,7 @@ export const lifeEvents = [
         section: 'Work',
         desc: 'After my first year of university studies, I started an internship at eKool as a full-stack software engineer. I developed small features and fixed bugs for one of the biggest education management tools and infosystems in Estonia.',
         stack: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate', 'JavaScript',
-            'JQuery', 'Bootstrap CSS', 'HTML'],
+            'JQuery', 'Bootstrap CSS'],
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ export const lifeEvents = [
         section: 'Work',
         desc: 'After completing my internship of 3 months, I was hired as a part-time Junior Developer. After working during one semester, I decided to leave the company to focus on my studies.',
         stack: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate', 'JavaScript',
-            'JQuery', 'Bootstrap CSS', 'HTML']
+            'JQuery', 'Bootstrap CSS']
     },
     {
         id: 4,
