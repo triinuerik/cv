@@ -42,8 +42,7 @@ export const lifeEvents = [
         title: 'Year abroad as an exchange student in France',
         date: '01/09/2018',
         section: 'Education',
-        desc: 'I decided to do my last year of bachelor studies in University of Technology of Troyes in France, \
-        as an exhange student wtih the Erasmus programme.'
+        desc: 'I decided to do my last year of bachelor studies in University of Technology of Troyes in France, as an exhange student wtih the Erasmus programme.'
     },
     {
         id: 6,
