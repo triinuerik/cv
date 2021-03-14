@@ -1,0 +1,44 @@
+.suggestions {
+  padding: 0;
+  margin: 1rem 1.2rem;
+  margin-top: 0;
+
+  .suggestion-grouping {
+    display: block;
+    list-style: none;
+    border: 0.5px solid #8f8f8f;
+    border-top: 0;
+    padding: 5px;
+    background-color: #ebebeb;
+    cursor: not-allowed;
+  }
+
+  .suggestion-item {
+    display: block;
+    list-style: none;
+    border: 0.5px solid #8f8f8f;
+    border-top: 0;
+    padding: 5px;
+    background-color: #FFFFFF;
+    
+    &:hover {
+      border: 0.5px solid #484848;
+      border-top: 0;
+      background-color: #484848;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  .active {
+    border: 0.5px solid #484848;
+    border-top: 0;
+    background-color: #484848;
+    color: #FFFFFF;
+  }
+}

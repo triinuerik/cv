@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import OutsideClickHandler from 'react-outside-click-handler';
-import { IoIosCloseCircleOutline } from "react-icons/io";
+import { IoIosCloseCircleOutline } from 'react-icons/io';
+import { Suggestions } from '../Suggestions/Suggestions';
 import './Filter.scss';
 
 
-const SECTION_TAGS = ['Work', 'Education', 'Personal'];
+export const SECTION_TAGS = ['Work', 'Education', 'Personal'];
 
 interface FilterProps {
   options: string[];
@@ -19,7 +20,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
 
   useEffect(() => {
     onFiltersChange(tags);
-  }, [tags])
+  }, [tags, onFiltersChange])
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     const newTag = (event.target as HTMLInputElement).value;
@@ -107,17 +108,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
           onFocus={handleChange}
         />
       </div>
-      <ul className='suggestions'>
-        { suggestions.map((matchedOption: string, index: number) => 
-          <li 
-            key={matchedOption}
-            className={`suggestion-item ${index === activeSuggestion && 'active'}`} 
-            onClick={() => addTag(matchedOption)}
-          >
-            { matchedOption }
-          </li>
-        )}
-      </ul>
+      <Suggestions suggestions={suggestions} activeSuggestion={activeSuggestion} onClick={addTag} />
     </OutsideClickHandler>
   )
 }
