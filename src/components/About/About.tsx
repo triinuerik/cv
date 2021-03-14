@@ -16,8 +16,7 @@ export const About: React.FC = () => {
             Hello, I'm Triinu.
             I'm a front-end developer with 2 years of experience in building web applications.
             I made this web site to introduce myself both as a person and as a developer, so
-            feel free to also
-            <a href='https://github.com/triinuerik/cv' target='_blank' rel='noreferrer'> check out the source code</a>.
+            feel free to also <a href='https://github.com/triinuerik/cv' target='_blank' rel='noreferrer'>check out the source code</a>.
 
           </p>
           <p>
