@@ -1,5 +1,3 @@
-type Section = 'Education' | 'Work' | 'Other'
-
 interface LifeEvent {
     id: number;
     title: string;
