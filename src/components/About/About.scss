@@ -5,10 +5,14 @@
   justify-content: center;
   margin: 1rem;
 
-  .about-image {
+  .about-image-container {
     margin: 1rem;
-    max-width: 35%;
-    max-height: 60vh;
+    max-width: 30%;
+
+    .about-image {
+      max-width: 100%;
+      height: auto; 
+    }
   }
 
   .about-text {
@@ -25,7 +29,6 @@
       .cv-button {
         font-weight: 600;
         border-radius: 5px;
-        // background-color: #484848;
         border: 1px solid #484848;
         color: #000000;
         white-space: nowrap;
@@ -47,14 +50,12 @@
   }
 }
 
-
-
 @media only screen and (max-width: 800px) {
   .about {
     flex-direction: column;
 
-    .about-image {
-      max-width: 60%;
+    .about-image-container {
+      max-width: 45%;
     }
   
     .about-text {
@@ -72,3 +73,17 @@
     }
   }
 }
+
+@media only screen and (max-width: 640px) {  
+    .about-image-container {
+      max-width: 60%;
+    }
+}
+
+@media only screen and (min-width: 2500px) {  
+  .about-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+

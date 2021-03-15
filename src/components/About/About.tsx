@@ -9,7 +9,9 @@ export const About: React.FC = () => {
   return (
     <div className='about-container'>
       <div className='about'>
-        <img src={AboutMeImage} alt='Author, Triinu Erik' className='about-image' />
+        <div className='about-image-container'>
+          <img src={AboutMeImage} height='4032' width='3024' alt='Author, Triinu Erik' className='about-image' />
+        </div>
         <div className='about-text'>
           <h2 className='about-title'>About me</h2>
           <p>
