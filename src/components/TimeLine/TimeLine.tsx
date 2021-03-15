@@ -13,10 +13,11 @@ export const TimeLine: React.FC<Props> = ({ lifeEvents }) => {
 
   const getUniqueOptions = () => {
     const allOptions = lifeEvents.flatMap(lifeEvent => {
-      if (lifeEvent.stack) {
-        return [...lifeEvent.stack, lifeEvent.section]
+      const { stack, section } = lifeEvent;
+      if (stack?.length) {
+        return [...stack, section]
       }
-      return [lifeEvent.section]
+      return [section]
     })
     return [...new Set(allOptions)]
   }
