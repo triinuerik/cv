@@ -11,6 +11,23 @@
   width: 36px;
   height: 30px;
   top: 18px;
+
+  #react-burger-menu-btn {
+    &:focus {
+      outline: 2px solid -webkit-focus-ring-color;
+      background: transparent;
+    }
+    
+    &:focus:not(:focus-visible) {
+      outline: none;
+      background: transparent;
+    }
+    
+    &:focus-visible {
+      outline: 2px solid -webkit-focus-ring-color;
+      background: transparent;
+    }
+  }
 }
 
 /* Color/shape of burger icon bars */
