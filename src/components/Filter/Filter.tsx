@@ -100,7 +100,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
         { tags.map((tag: string) => 
           <span className={`tag ${SECTION_TAGS.includes(tag) && tag}`} key={tag}>
             { tag }
-            <span role='button' className='tag-remove-button' onClick={() => removeTag(tag)}>
+            <span role='button' aria-label='Remove' className='tag-remove-button' onClick={() => removeTag(tag)}>
               <IoIosCloseCircleOutline />
             </span>
           </span> )}
