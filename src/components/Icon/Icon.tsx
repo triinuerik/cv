@@ -1,5 +1,5 @@
 import React from 'react';
-import { IoIosBriefcase, IoIosSchool, IoIosPerson } from "react-icons/io";
+import { IoIosBriefcase, IoIosSchool, IoIosPerson } from 'react-icons/io';
 import './Icon.scss'
 
 

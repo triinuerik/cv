@@ -1,5 +1,5 @@
 import React from 'react';
-import { IoIosMail, IoIosCall, IoLogoLinkedin, IoLogoGithub } from "react-icons/io";
+import { IoIosMail, IoIosCall, IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 import './Contact.scss';
 
 

@@ -25,7 +25,7 @@ export const TimeLine: React.FC<Props> = ({ lifeEvents }) => {
   const getFiltredNodes = () => 
     lifeEvents.filter((lifeEvent: LifeEvent) => selectedFilters.length 
       ? selectedFilters.every((tag: string) => lifeEvent.stack?.includes(tag) || lifeEvent.section === tag) 
-      : true)
+      : true);
 
   return(
     <div className='timeline'>
