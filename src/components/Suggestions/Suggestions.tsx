@@ -9,22 +9,18 @@ interface SuggestionsProps {
 }
 
 export const Suggestions: React.FC<SuggestionsProps> = ({suggestions, activeSuggestion, onClick}) => {
+  const categorySuggestions = suggestions.filter((suggestion: string) => SECTION_TAGS.includes(suggestion));
+  const technologySuggestions = suggestions.filter((suggestion: string) => !SECTION_TAGS.includes(suggestion));
 
-  const sortSuggestions = () => 
-    suggestions.sort((a: string, b: string) => a.localeCompare(b))
-
-  const mapSuggestionItems = (startingIndex = 0) => (matchedOption: string, index: number) => (
+  const mapSuggestionItems = (startingIndex = 0) => (suggestion: string, index: number) => (
     <li 
-      key={matchedOption}
+      key={suggestion}
       className={`suggestion-item ${index + startingIndex === activeSuggestion && 'active'}`} 
-      onClick={() => onClick(matchedOption)}
+      onClick={() => onClick(suggestion)}
     >
-      { matchedOption }
+      { suggestion }
     </li>
   )
-
-  const categorySuggestions = sortSuggestions().filter((suggestion: string) => SECTION_TAGS.includes(suggestion))
-  const technologySuggestions = sortSuggestions().filter((suggestion: string) => !SECTION_TAGS.includes(suggestion))
 
   return (
     <ul className='suggestions'>

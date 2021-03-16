@@ -27,6 +27,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
     switch (event.key) {
       case 'Enter':
         if (activeSuggestion > -1) {
+          console.log(suggestions)
           addTag(suggestions[activeSuggestion]);
         } else {
           addTag(newTag);
@@ -76,8 +77,14 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
 
   const removeTag = (removedTag: string) => setTags(tags.filter((tag: string) => tag !== removedTag))
 
-  const getFilteredOptions = (stringToMatch: string) => 
-    options.filter((option: string) => option.toLowerCase().includes(stringToMatch.toLowerCase()))
+  const getFilteredOptions = (searchText: string) => {
+    const matchingSuggestions = options
+      .filter((option: string) => option.toLowerCase().includes(searchText.toLowerCase()))
+      .sort((a: string, b: string) => a.localeCompare(b));
+    const categorySuggestions = matchingSuggestions.filter((suggestion: string) => SECTION_TAGS.includes(suggestion));
+    const technologySuggestions = matchingSuggestions.filter((suggestion: string) => !SECTION_TAGS.includes(suggestion));
+    return [...categorySuggestions, ...technologySuggestions];
+  }
 
   const blinkError = () => {
     inputRef.current.classList.remove('error-blink');
