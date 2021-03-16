@@ -15,13 +15,13 @@ const App: React.FC = () => {
         <BurgerMenu pageWrapId='content-container' outerContainerId='app-container' />
         <div id='content-container' className='content-container'>
           <Switch>
-            <Route exact path="/">
-              <Redirect to="/about" />
+            <Route exact path='/'>
+              <Redirect to='/about' />
             </Route>
-            <Route path="/about">
+            <Route path='/about'>
               <About />
             </Route>
-            <Route path="/cv">
+            <Route path='/cv'>
               <TimeLine lifeEvents={[...lifeEvents].reverse()} />
             </Route>
           </Switch>
