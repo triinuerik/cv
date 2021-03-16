@@ -29,14 +29,14 @@ export const Suggestions: React.FC<SuggestionsProps> = ({suggestions, activeSugg
             <li className='suggestion-grouping'>Categories</li>
             { categorySuggestions.map(mapSuggestionItems()) }
           </>
-        : <div />
+        : null
       }
       { technologySuggestions.length
         ? <>
             <li className='suggestion-grouping'>Technologies</li>
             { technologySuggestions.map(mapSuggestionItems(categorySuggestions.length)) }
           </>
-        : <div />
+        : null
       }
     </ul>
   )
