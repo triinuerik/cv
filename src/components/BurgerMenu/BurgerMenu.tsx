@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { slide as Menu, State as BurgerMenuState } from 'react-burger-menu';
-import './BurgerMenu.scss'
+import './BurgerMenu.scss';
 
 
 interface BurgerMenuProps {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Stack.scss'
+import './Stack.scss';
 
 interface StackProps {
   stack: string[];

@@ -1,6 +1,6 @@
 import React from 'react';
 import { IoIosBriefcase, IoIosSchool, IoIosPerson } from 'react-icons/io';
-import './Icon.scss'
+import './Icon.scss';
 
 
 interface IconProps {

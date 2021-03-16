@@ -27,7 +27,6 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
     switch (event.key) {
       case 'Enter':
         if (activeSuggestion > -1) {
-          console.log(suggestions)
           addTag(suggestions[activeSuggestion]);
         } else {
           addTag(newTag);
@@ -61,7 +60,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target as HTMLInputElement;
-    setSuggestions(getFilteredOptions(value))
+    setSuggestions(getFilteredOptions(value));
   }
 
   const addTag = (newTag: string) => {
@@ -75,7 +74,7 @@ export const Filter: React.FC<FilterProps> = ({options, onFiltersChange}) => {
     }
   }
 
-  const removeTag = (removedTag: string) => setTags(tags.filter((tag: string) => tag !== removedTag))
+  const removeTag = (removedTag: string) => setTags(tags.filter((tag: string) => tag !== removedTag));
 
   const getFilteredOptions = (searchText: string) => {
     const matchingSuggestions = options
