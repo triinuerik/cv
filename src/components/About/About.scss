@@ -50,6 +50,19 @@
   }
 }
 
+@media only screen and (min-width: 2500px) {  
+  .about-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1400px) {  
+  .about-image-container {
+    width: 25%;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .about {
     flex-direction: column;
@@ -75,15 +88,9 @@
 }
 
 @media only screen and (max-width: 640px) {  
-    .about-image-container {
-      max-width: 60%;
-    }
-}
-
-@media only screen and (min-width: 2500px) {  
-  .about-container {
-    width: 70%;
-    margin: 0 auto;
+  .about-image-container {
+    max-width: 60%;
   }
 }
+
 

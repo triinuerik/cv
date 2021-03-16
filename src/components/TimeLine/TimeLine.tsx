@@ -15,11 +15,11 @@ export const TimeLine: React.FC<Props> = ({ lifeEvents }) => {
     const allOptions = lifeEvents.flatMap(lifeEvent => {
       const { stack, section } = lifeEvent;
       if (stack?.length) {
-        return [...stack, section]
+        return [...stack, section];
       }
-      return [section]
+      return [section];
     })
-    return [...new Set(allOptions)]
+    return [...new Set(allOptions)];
   }
 
   const getFiltredNodes = () => 
